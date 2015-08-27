@@ -20,6 +20,121 @@
 					<key>Optional</key>
 					<true/>
 					<key>Types</key>
+					<array/>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>pauseDuration</key>
+					<dict/>
+					<key>pauseUnit</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array/>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Pause.action</string>
+				<key>ActionName</key>
+				<string>Pause</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>pauseDuration</key>
+					<integer>30</integer>
+					<key>pauseUnit</key>
+					<integer>0</integer>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Pause</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>PauseAction</string>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>AA4337BF-8892-410D-9146-B757B0F645A0</string>
+				<key>Keywords</key>
+				<array>
+					<string>Dauer</string>
+					<string>Warten</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>FB48A5BF-4122-442A-BD69-BB3754F4942A</string>
+				<key>UUID</key>
+				<string>85EB3487-949C-4C45-91E8-A0A967726A82</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>pauseUnit</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>pauseDuration</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>309.000000:227.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Pause.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
 					<array>
 						<string>*</string>
 					</array>
@@ -113,7 +228,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:173.000000</string>
+				<string>309.000000:330.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -300,7 +415,7 @@ EOF</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:356.000000</string>
+				<string>309.000000:513.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/German.lproj/main.nib</string>
 			</dict>
@@ -382,19 +497,26 @@ EOF</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>9677DFDC-8922-4C80-BDF0-25BCCDADFF7F</key>
+		<key>23935C76-6CBC-42EC-B0B1-304509B922CA</key>
 		<dict>
 			<key>from</key>
-			<string>1E994A75-4763-427B-9FC8-7C9C700E1EC0 - 1E994A75-4763-427B-9FC8-7C9C700E1EC0</string>
+			<string>85EB3487-949C-4C45-91E8-A0A967726A82 - 85EB3487-949C-4C45-91E8-A0A967726A82</string>
 			<key>to</key>
-			<string>3D7823F0-2426-4D58-867D-DE0DDFDF025F - 3D7823F0-2426-4D58-867D-DE0DDFDF025F</string>
+			<string>23A6FE2D-312B-4F1B-8376-D19101269279 - 23A6FE2D-312B-4F1B-8376-D19101269279</string>
 		</dict>
-		<key>BACA48A5-3E54-44F3-A613-B59A2733D204</key>
+		<key>8E4B79DB-07E5-461B-9773-4CD1B16F66F8</key>
 		<dict>
 			<key>from</key>
 			<string>23A6FE2D-312B-4F1B-8376-D19101269279 - 23A6FE2D-312B-4F1B-8376-D19101269279</string>
 			<key>to</key>
 			<string>1E994A75-4763-427B-9FC8-7C9C700E1EC0 - 1E994A75-4763-427B-9FC8-7C9C700E1EC0</string>
+		</dict>
+		<key>D4BA9EAD-872E-48BB-BA73-E28BDA055412</key>
+		<dict>
+			<key>from</key>
+			<string>1E994A75-4763-427B-9FC8-7C9C700E1EC0 - 1E994A75-4763-427B-9FC8-7C9C700E1EC0</string>
+			<key>to</key>
+			<string>3D7823F0-2426-4D58-867D-DE0DDFDF025F - 3D7823F0-2426-4D58-867D-DE0DDFDF025F</string>
 		</dict>
 	</dict>
 	<key>variables</key>
