@@ -12,6 +12,9 @@ RegExMatch(url,"/([^/]+)$",file)
 file = %A_ScriptDir%\BingWallpaper.jpg
 UrlDownloadToFile, %url%, %file%
 DllCall("SystemParametersInfo", UInt, 0x14, UInt, 0, Str, file, UInt, 1)
+var=%1%
+If (var == "--quit")
+ExitApp
 return
 
 UrlDownloadToVar(URL, Proxy="", ProxyBypass="") {
