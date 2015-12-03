@@ -1,4 +1,5 @@
 #Persistent
+#SingleInstance force
 SetTimer, Loop, 3600000 ; check for new wallpaper once per hour
 Goto Loop
 return
