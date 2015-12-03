@@ -35,6 +35,13 @@ Extract `BingWallpaper.exe` to a folder of your choice
 (preferably outside of \Program Files),
 and add a shortcut to your Startup folder.
 
+### Quitting the Windows app after setting the wallpaper
+
+By default, BingWallpaper will keep running in the background,
+and check the Bing server once per hour for a new wallpaper.
+If you prefer to check just once and then quit, append the `--quit` parameter.
+This makes BingWallpaper suitable for adding a shortcut to the startup, for example.
+
 ## OS X
 
 ### How does it work?
