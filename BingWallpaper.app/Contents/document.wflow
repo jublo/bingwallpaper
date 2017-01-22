@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>409.2</string>
+	<string>428</string>
 	<key>AMApplicationVersion</key>
-	<string>2.5</string>
+	<string>2.7</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -113,12 +113,10 @@
 						<string>1</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:227.000000</string>
+				<string>529.000000:175.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Pause.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -228,7 +226,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:330.000000</string>
+				<string>529.000000:278.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Get Value of Variable.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -295,7 +293,16 @@ if (!preg_match('/&lt;urlBase&gt;(.+)&lt;\/urlBase&gt;/', $xml, $match)) {
   die();
 }
 $url = 'http://www.bing.com' . $match[1] . '_1920x1080.jpg';
-$file = '/Users/' . $user . '/Pictures/BingWallpaper.jpg';
+$folder = '/Users/' . $user . '/Pictures/';
+// find and delete any old images
+$dir = dir($folder);
+while ($file = $dir-&gt;read()) {
+  if (preg_match('/BingWallpaper-[0-9a-f]{4}\.jpg$/', $file)) {
+    @unlink($folder . $file);
+  }
+}
+// MD5 is fine here, no security involved
+$file = $folder . 'BingWallpaper-' . substr(md5(time()), 0, 4) . '.jpg';
 $fp = fopen($file, 'w');
 fwrite($fp, file_get_contents($url));
 fclose($fp);
@@ -415,7 +422,7 @@ EOF</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:513.000000</string>
+				<string>529.000000:461.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/German.lproj/main.nib</string>
 			</dict>
@@ -497,21 +504,21 @@ EOF</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>23935C76-6CBC-42EC-B0B1-304509B922CA</key>
-		<dict>
-			<key>from</key>
-			<string>85EB3487-949C-4C45-91E8-A0A967726A82 - 85EB3487-949C-4C45-91E8-A0A967726A82</string>
-			<key>to</key>
-			<string>23A6FE2D-312B-4F1B-8376-D19101269279 - 23A6FE2D-312B-4F1B-8376-D19101269279</string>
-		</dict>
-		<key>8E4B79DB-07E5-461B-9773-4CD1B16F66F8</key>
+		<key>1C6316C6-6476-4B95-BDC0-D7893A01A3F4</key>
 		<dict>
 			<key>from</key>
 			<string>23A6FE2D-312B-4F1B-8376-D19101269279 - 23A6FE2D-312B-4F1B-8376-D19101269279</string>
 			<key>to</key>
 			<string>1E994A75-4763-427B-9FC8-7C9C700E1EC0 - 1E994A75-4763-427B-9FC8-7C9C700E1EC0</string>
 		</dict>
-		<key>D4BA9EAD-872E-48BB-BA73-E28BDA055412</key>
+		<key>256C49C5-0099-4C2F-9063-2E1DB571A98E</key>
+		<dict>
+			<key>from</key>
+			<string>85EB3487-949C-4C45-91E8-A0A967726A82 - 85EB3487-949C-4C45-91E8-A0A967726A82</string>
+			<key>to</key>
+			<string>23A6FE2D-312B-4F1B-8376-D19101269279 - 23A6FE2D-312B-4F1B-8376-D19101269279</string>
+		</dict>
+		<key>2DC7BAE2-7441-4837-8A6F-CEC21B91EF3A</key>
 		<dict>
 			<key>from</key>
 			<string>1E994A75-4763-427B-9FC8-7C9C700E1EC0 - 1E994A75-4763-427B-9FC8-7C9C700E1EC0</string>
